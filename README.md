@@ -69,3 +69,6 @@
   });
   ```
   * 這裡的意思是`MyTitle`這個component的`title`屬性必須是string並且是required
+
+## ref.
+  * http://www.ruanyifeng.com/blog/2015/03/react.html
