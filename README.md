@@ -55,6 +55,7 @@
     return <li>{child}</li>
   });
   ```
+  
 ## PropTypes
   * component 的屬性可以是任意值，字串，函數等都可以。
   * 要驗證屬性的值可以用 PropTypes
