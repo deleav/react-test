@@ -27,7 +27,6 @@
     * class需寫成className
     * for需寫成htmlFor
     * 因為class和for是js的保留字
-
   ```javascript
   var ComponentName = React.createClass({
     render: function() {
@@ -49,13 +48,12 @@
     3. array: 當前component有多個子節點
   * React.Children method
     * 可使用 React.Children.map 來遍歷子節點
-
   ```javascript
   React.Children.map(this.props.children, function(child) {
     return <li>{child}</li>
   });
   ```
-  
+
 ## PropTypes
   * component 的屬性可以是任意值，字串，函數等都可以。
   * 要驗證屬性的值可以用 PropTypes
