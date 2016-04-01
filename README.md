@@ -28,17 +28,17 @@
     * for需寫成htmlFor
     * 因為class和for是js的保留字
 
-```javascript
-var ComponentName = React.createClass({
-  render: function() {
-    return <h1>Hello {this.props.name}</h1>
-  }
-});
-ReactDOM.render(
-  <ComponentName name="deleav" />,
-  document.getElementById("YEE");
-);
-```
+  ```javascript
+  var ComponentName = React.createClass({
+    render: function() {
+      return <h1>Hello {this.props.name}</h1>
+    }
+  });
+  ReactDOM.render(
+    <ComponentName name="deleav" />,
+    document.getElementById("YEE");
+  );
+  ```
 
 ## 2.React this.props.children
   * this.props與component的html屬性互相對應
@@ -50,15 +50,14 @@ ReactDOM.render(
   * React.Children method
     * 可使用 React.Children.map 來遍歷子節點
 
-```javascript
-React.Children.map(this.props.children, function(child) {
-  return <li>{child}</li>
-});
-```
+  ```javascript
+  React.Children.map(this.props.children, function(child) {
+    return <li>{child}</li>
+  });
+  ```
 ## PropTypes
   * component 的屬性可以是任意值，字串，函數等都可以。
   * 要驗證屬性的值可以用 PropTypes
-
   ```javascript
   var MyTitle = React.createClass({
   propTypes: {
