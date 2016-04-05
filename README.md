@@ -4,13 +4,13 @@
   * 兩種方法
     * 使用`browserify`
     * 使用`webpack`
-  * ### 1.使用 **browserify**
+  * ### 1.使用 browserify
     ```
     $ npm install --save react react-dom babelify babel-preset-react
     $ browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js
     ```
 
-  * ### 2.使用 **webpack**
+  * ### 2.使用 webpack
     ```
     $ npm install --save react react-dom babel-preset-react
     $ webpack
