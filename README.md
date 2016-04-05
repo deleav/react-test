@@ -1,6 +1,6 @@
 # React 學習筆記
 
-## 1.Using React from npm
+## 1. Using React from npm
   * 兩種方法
     * 使用`browserify`
     * 使用`webpack`
@@ -28,9 +28,10 @@
     );
     ```
 
-## 2.Quick Start Without npm
+## 2. Quick Start Without npm
   * 先[下載](http://facebook.github.io/react/downloads.html)React
   * code
+
     ```html
     <!DOCTYPE html>
     <html>
