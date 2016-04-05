@@ -1,0 +1,9 @@
+{
+  "name": "react-test",
+  "private": false,
+  "version": "0.0.0",
+  "description": "a react demo",
+  "keywords": [],
+  "dependencies": {
+  }
+}

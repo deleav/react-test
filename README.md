@@ -1,74 +1,54 @@
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
-  </head>
-  <body>
-    <div id="example"></div>
-    <script type="text/babel">
-      ReactDOM.render(
-        <h1>Hello, world!</h1>,
-        document.getElementById('example')
-      );
-    </script>
-  </body>
-</html>
-```
+# React 學習筆記
 
-## 1.React Component 使用方法
-  * 每個component都必須有自己的render方法
-  * component開頭必須大寫
-  * component只能有一個最外層的html label
-    * `O <div><p></p></div>`
-    * `X <div></div><p></p>`
-  * 可以加入任意html屬性在Component，但須注意兩點
-    * class需寫成className
-    * for需寫成htmlFor
-    * 因為class和for是js的保留字
-  ```javascript
-  var ComponentName = React.createClass({
-    render: function() {
-      return <h1>Hello {this.props.name}</h1>
-    }
-  });
-  ReactDOM.render(
-    <ComponentName name="deleav" />,
-    document.getElementById("YEE");
-  );
-  ```
+## 1.Using React from npm
+  * 兩種方法
+    * 使用`browserify`
+    * 使用`webpack`
+  * ### 1.使用 **browserify**
+    ```
+    $ npm install --save react react-dom babelify babel-preset-react
+    $ browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js
+    ```
 
-## 2.React this.props.children
-  * this.props與component的html屬性互相對應
-  * 例外 this.props.children 指的是component所有子節點
-  * this.props.children 有三種 type
-    1. undefined: 當前component沒有子節點
-    2. object: 當前component有一個子節點P
-    3. array: 當前component有多個子節點
-  * React.Children method
-    * 可使用 React.Children.map 來遍歷子節點
-  ```javascript
-  React.Children.map(this.props.children, function(child) {
-    return <li>{child}</li>
-  });
-  ```
+  * ### 2.使用 **webpack**
+    ```
+    $ npm install --save react react-dom babel-preset-react
+    $ webpack
+    ```
 
-## PropTypes
-  * component 的屬性可以是任意值，字串，函數等都可以。
-  * 要驗證屬性的值可以用 PropTypes
-  ```javascript
-  var MyTitle = React.createClass({
-  propTypes: {
-    title: React.PropTypes.string.isRequired,
-  },
+  * code
+    ```javascript
+    // main.js
+    var React = require('react');
+    var ReactDOM = require('react-dom');
 
-  render: function() {
-      return <h1> {this.props.title} </h1>;
-    }
-  });
-  ```
-  * 這裡的意思是`MyTitle`這個component的`title`屬性必須是string並且是required
+    ReactDOM.render(
+      <h1>Hello, world!</h1>,
+      document.getElementById('example')
+    );
+    ```
 
-## ref.
-  * http://www.ruanyifeng.com/blog/2015/03/react.html
+## 2.Quick Start Without npm
+  * 先[下載](http://facebook.github.io/react/downloads.html)React
+  * code
+    ```html
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8" />
+        <title>Hello React!</title>
+        <script src="build/react.js"></script>
+        <script src="build/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+      </head>
+      <body>
+        <div id="example"></div>
+        <script type="text/babel">
+          ReactDOM.render(
+            <h1>Hello, world!</h1>,
+            document.getElementById('example')
+          );
+        </script>
+      </body>
+    </html>
+    ```
