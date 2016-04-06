@@ -1,6 +1,6 @@
 ## Quick Start Without npm
 
-### 1.React Component 使用方法
+### 1. React Component 使用方法
   * 每個component都必須有自己的render方法
   * component開頭必須大寫
   * component只能有一個最外層的html label
@@ -22,7 +22,7 @@
   );
   ```
 
-### 2.React this.props.children
+### 2. React this.props.children
   * this.props與component的html屬性互相對應
   * 例外 this.props.children 指的是component所有子節點
   * this.props.children 有三種 type
