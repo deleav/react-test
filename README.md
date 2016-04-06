@@ -1,22 +1,22 @@
 # React 學習筆記
 
 ## 1. Using React from npm
-  * ### 兩種方法
+  * **兩種方法**
     * 使用`browserify`
     * 使用`webpack`
-  * ### 使用 browserify
+  * **使用 browserify**
     ```
     $ npm install --save react react-dom babelify babel-preset-react
     $ browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js
     ```
 
-  * ### 使用 webpack
+  * **使用 webpack**
     ```
     $ npm install --save react react-dom babel-preset-react
     $ webpack
     ```
 
-  * ### code
+  * **code**
     ```javascript
     // main.js
     var React = require('react');
@@ -29,8 +29,8 @@
     ```
 
 ## 2. Quick Start Without npm
-  * ### 先[下載](http://facebook.github.io/react/downloads.html)React
-  * ### code
+  * **先[下載](http://facebook.github.io/react/downloads.html)React**
+  * **code**
 
     ```html
     <!DOCTYPE html>
